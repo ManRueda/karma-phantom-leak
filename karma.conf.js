@@ -6,6 +6,7 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
     // list of files / patterns to load in the browser
     files: [
+      'src/karma-hacks.js',
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'src/app.js',
@@ -28,6 +29,13 @@ module.exports = function (config) {
     autoWatch: true,
     // Start these browsers
     browsers: ['PhantomJS'],
+
+    customLaunchers: {
+      ChromeGC: {
+        base: 'Chrome',
+        flags: ['--js-flags="--expose-gc"']
+      }
+    },
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,

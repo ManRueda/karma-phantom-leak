@@ -1,9 +1,9 @@
 const count = Number(process.argv[2])
 function getCode(number) {
   return `
-    module.controller('${number}Controller', function ($scope) {
+    module.controller('${number}Controller', function _${number}Controller($scope) {
       $scope.password = '';
-      $scope.grade = function() {
+      $scope.grade = function grade() {
         var size = $scope.password.length;
         if (size > 8) {
           $scope.strength = 'strong';

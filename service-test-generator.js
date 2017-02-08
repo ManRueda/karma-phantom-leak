@@ -3,16 +3,16 @@ const cleanObjects = !!process.argv[3]
 
 function getCode(number) {
   return `
-  describe('Service${number}', function () {
+  describe('Service${number}', function onDescribe() {
     var service
-    beforeEach(inject(function (_Service${number}_, _$window_) {
+    beforeEach(inject(function onInject(_Service${number}_, _$window_) {
       service = new _Service${number}_()
     }))
-    it('Service${number}', function () {
+    it('Service${number}', function onIt() {
       expect(service.getWindow()).toBe($window)
     })
     ` + (cleanObjects ? `
-      afterEach(function () {
+      afterEach(function onAfterEach() {
         service = null
       })
       ` : '') + `
@@ -21,10 +21,10 @@ function getCode(number) {
 }
 
 let code = `
-describe('Services', function () {
+describe('Services', function onDescribe() {
   beforeEach(module('app'))
   var $window
-  beforeEach(inject(function (_$window_) {
+  beforeEach(inject(function onInject(_$window_) {
     $window = _$window_
   }))
   `
@@ -34,7 +34,7 @@ for (var i = 0; i < count; i++) {
 
 if (cleanObjects) {
   code = code + `
-  afterEach(function () {
+  afterEach(function onAfterEach() {
     $window = null
   })
   `

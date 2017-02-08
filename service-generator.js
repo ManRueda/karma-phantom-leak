@@ -3,9 +3,9 @@
 const count = Number(process.argv[2])
 function getCode(number) {
   return `
-    module.service('Service${number}', function ($window) {
-      return function () {
-        this.getWindow = function () {
+    module.service('Service${number}', function Service${number}Factory($window) {
+      return function Service${number}() {
+        this.getWindow = function getWindow() {
           return $window
         }
       }
