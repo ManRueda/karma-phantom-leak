@@ -5,7 +5,8 @@
   "author": "Manuel Rueda <manuel.rueda.un@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "test-chrome": "karma start --browsers Chrome"
   },
   "devDependencies": {
     "jasmine-core": "^2.5.2",
