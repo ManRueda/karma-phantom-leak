@@ -1,5 +1,5 @@
 {
-  "name": "karma-phanthom-leak",
+  "name": "karma-phantom-leak",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Manuel Rueda <manuel.rueda.un@gmail.com>",
