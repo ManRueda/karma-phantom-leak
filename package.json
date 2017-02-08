@@ -5,11 +5,9 @@
   "author": "Manuel Rueda <manuel.rueda.un@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "grunt karma"
+    "test": "karma start"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-karma": "^2.0.0",
     "jasmine-core": "^2.5.2",
     "karma": "^1.4.1",
     "karma-chrome-launcher": "^2.0.0",
